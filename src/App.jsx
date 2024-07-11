@@ -1,12 +1,20 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import HomePage from './components/HomePage'
+import Nav from './components/Nav'
+import AboutPage from './components/AboutPage';
 
-// Paleta de cores já está definida no arquivo tailwind.config.js
 
 function App() {
     return (
         <div className="App">
-            <HomePage />
+            <Nav/>
+            <Element name="Home">
+                <HomePage />
+            </Element>
+            <Element name="About">
+                <AboutPage/>
+            </Element>       
         </div>
     );
 }

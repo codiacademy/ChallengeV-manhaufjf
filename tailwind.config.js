@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        nav: '#1A0F24',
         offwhite: '#C1C1C1',
         magic:{
           100: '#CE80F4',
