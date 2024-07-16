@@ -14,6 +14,10 @@ module.exports = {
           400: '#582173',
           500: '#431055'
         }
+      },
+
+      animation: {
+        'bounce-slow': 'bounce 2s linear infinite',
       }
     },
   },
