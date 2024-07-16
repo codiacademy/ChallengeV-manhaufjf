@@ -4,7 +4,6 @@ import FundoEsquerda from './images/parallax/FundoEsquerda.png';
 import LayerMeio from './images/parallax/LayerMeio.png';
 import MeioDireita from './images/parallax/MeioDireita.png';
 import MeioEsquerda from './images/parallax/MeioEsquerda.png';
-import LayerFrente from './images/parallax/LayerFrente.png';
 
 let Images = [
     {name: FundoCentro, class: 'fundocentro', z: 1, custom: 3},
@@ -13,7 +12,6 @@ let Images = [
     {name: LayerMeio, class: 'layermeio', z: 4, custom: 2},
     {name: MeioDireita, class: 'meiodireita', z: 4, custom: 2},
     {name: MeioEsquerda, class: 'meioesquerda', z: 4, custom: 2},
-    {name: LayerFrente, class: 'layerfrente', z: 5, custom: 1},
 ]
 
 export {Images};
