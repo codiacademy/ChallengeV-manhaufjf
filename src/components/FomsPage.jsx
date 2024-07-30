@@ -2,18 +2,19 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import myImage from '../images/NexusMago.png'
+import myImage from '../images/NexusMago.png';
+import InputMask from 'react-input-mask';
 
 // Define validation schema using yup
 const schema = yup.object().shape({
-    name: yup.string().required('Nome is required').min(3, 'Name must be at least 3 characters long'),
-    email: yup.string().required('Email is required').email('Invalid email format'),
-    telefone: yup.number().required('Telefone is required').positive().integer(),
-    nome_empresa: yup.string().required('Nome da Empresa is required'),
-    departamento: yup.string().required('Selection is required'),
-    segmento_empresa: yup.string().required('Selection is required'),
-    solucao_interesse: yup.string().required('Selection is required'),
-    mensagem: yup.string().required('Mensassem é requerida'),
+    name: yup.string().required('Nome é necessário').min(3, 'Nome precisa ter pelo menos 3 caracteres'),
+    email: yup.string().required('Email é necessário').email('Formato de email inválido'),
+    telefone: yup.string().required('Telefone é necessário').matches(/^\+\d{2} \d{2} \d{5}\.\d{4}$/, 'Telefone deve ter exatamente 13 dígitos no formato +XX XX XXXXX.XXXX'),
+    nome_empresa: yup.string().required('Nome da Empresa é necessário'),
+    departamento: yup.string().required('Selecionar é necessário'),
+    segmento_empresa: yup.string().required('Selecionar é necessário'),
+    solucao_interesse: yup.string().required('Selecionar é necessário'),
+    mensagem: yup.string().required('Mensagem é necessária'),
 });
 
 // Define the form component
@@ -26,11 +27,9 @@ const FormsPage = () => {
         console.log(data);
     };
 
-
-
     return (
         <div className='bg-radial-gradient min-h-screen p-4'>
-            <div className="flex justify-center items-start h-full p-4">
+            <div className="flex justify-center items-start p-4">
                 <h1
                     style={{ boxShadow: 'inset 0 4px 6px rgba(0, 0, 0, 0.4)' }}
                     className="text-6xl text-white bg-magic-200 mb-8 w-auto h-auto rounded-lg p-6 text-center"
@@ -38,9 +37,9 @@ const FormsPage = () => {
                     Entre em contato
                 </h1>
             </div>
-            <div className="flex justify-center items-center h-screen p-4 space-x-12">
+            <div className="flex flex-col md:flex-row justify-center items-center p-4 space-x-0 md:space-x-12">
                 {/* Image Section */}
-                <div className="flex-none w-1/2 p-0 m-0 overflow-hidden">
+                <div className="flex-none w-full md:w-1/2 p-0 m-0 overflow-hidden mb-8 md:mb-0">
                     <img
                         src={myImage}
                         alt="Imagem do Nexus"
@@ -49,7 +48,7 @@ const FormsPage = () => {
                 </div>
 
                 {/* Form Section */}
-                <div className="w-1/2 p-12  rounded-lg">
+                <div className="w-full md:w-1/2 p-4 md:p-12 rounded-lg">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {/* Name Field */}
                         <div className="mb-8">
@@ -86,11 +85,11 @@ const FormsPage = () => {
                                 <label htmlFor="telefone" className="block text-magic-100 text-xl mb-3">
                                     Telefone
                                 </label>
-                                <input
+                                <InputMask
                                     id="telefone"
-                                    type="tel"
+                                    mask="+99 99 99999.9999"
                                     {...register('telefone')}
-                                    placeholder="+32 11 11111.1111"
+                                    placeholder="+XX XX XXXXX.XXXX"
                                     className="w-full px-5 py-4 border bg-magic-100 text-white rounded-lg placeholder-white shadow-md transition-opacity duration-300 ease-in-out hover:opacity-75 focus:opacity-75 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                     style={{ boxShadow: 'inset 0 4px 8px rgba(0, 0, 0, 0.2)' }}
                                 />
@@ -151,7 +150,7 @@ const FormsPage = () => {
                             </div>
                             <div className="flex-1">
                                 <label htmlFor="solucao_interesse" className="block text-magic-100 text-xl mb-3">
-                                    Solução que tem interesse
+                                    Solução de interesse
                                 </label>
                                 <select
                                     id="solucao_interesse"
@@ -175,15 +174,13 @@ const FormsPage = () => {
                             <textarea
                                 id="mensagem"
                                 {...register('mensagem')}
-                                placeholder="Sua mensagem"
-                                className="w-full px-5 py-4 border bg-magic-100 text-white rounded-lg placeholder-white shadow-md transition-opacity duration-300 ease-in-out hover:opacity-75 focus:opacity-75 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                                rows="4"
+                                placeholder="Escreva sua mensagem"
+                                className="w-full h-32 px-5 py-4 border bg-magic-100 text-white rounded-lg placeholder-white shadow-md transition-opacity duration-300 ease-in-out hover:opacity-75 focus:opacity-75 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                 style={{ boxShadow: 'inset 0 4px 8px rgba(0, 0, 0, 0.2)' }}
                             />
                             {errors.mensagem && <p className="text-red-500 text-base mt-2">{errors.mensagem.message}</p>}
                         </div>
 
-                        {/* Submit Button */}
                         <button
                             type="submit"
                             className="px-4 z-30 py-2 bg-magic-300 rounded-lg text-white relative font-semibold font-[Poppins] after:-z-20 after:absolute after:h-1 after:w-1 after:bg-magic-400 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-500 after:transition-all after:duration-500 transition-all duration-500 text-xl"
@@ -199,4 +196,3 @@ const FormsPage = () => {
 };
 
 export default FormsPage;
-
