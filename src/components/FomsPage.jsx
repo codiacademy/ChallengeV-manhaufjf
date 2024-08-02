@@ -32,14 +32,14 @@ const FormsPage = () => {
             <div className="flex justify-center items-start p-4">
                 <h1
                     style={{ boxShadow: 'inset 0 4px 6px rgba(0, 0, 0, 0.4)' }}
-                    className="text-6xl text-white bg-magic-200 mb-8 w-auto h-auto rounded-lg p-6 text-center"
+                    className="text-6xl text-white bg-magic-200 mb-4 w-auto h-auto rounded-lg p-6 text-center"
                 >
                     Entre em contato
                 </h1>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center p-4 space-x-0 md:space-x-12">
+            <div className="flex flex-col md:flex-row justify-center items-center p-4 space-x-0 md:space-x-1">
                 {/* Image Section */}
-                <div className="flex-none w-full md:w-1/2 p-0 m-0 overflow-hidden mb-8 md:mb-0">
+                <div className="flex-none w-full md:w-2/5 p-0 m-0 overflow-hidden mb-4 md:mb-0">
                     <img
                         src={myImage}
                         alt="Imagem do Nexus"
@@ -48,10 +48,10 @@ const FormsPage = () => {
                 </div>
 
                 {/* Form Section */}
-                <div className="w-full md:w-1/2 p-4 md:p-12 rounded-lg">
+                <div className="w-full md:w-1/2 p-0 md:p-0 rounded-lg">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {/* Name Field */}
-                        <div className="mb-8">
+                        <div className="mb-4">
                             <label htmlFor="name" className="block text-magic-100 text-xl mb-3">
                                 Nome
                             </label>
@@ -66,7 +66,7 @@ const FormsPage = () => {
                         </div>
 
                         {/* Other Fields */}
-                        <div className="flex flex-wrap gap-8 mb-8">
+                        <div className="flex flex-wrap gap-8 mb-4">
                             <div className="flex-1">
                                 <label htmlFor="email" className="block text-magic-100 text-xl mb-3">
                                     Email
@@ -97,7 +97,7 @@ const FormsPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-8 mb-8">
+                        <div className="flex flex-wrap gap-8 mb-4">
                             <div className="flex-1">
                                 <label htmlFor="nome_empresa" className="block text-magic-100 text-xl mb-3">
                                     Nome da Empresa
@@ -130,7 +130,7 @@ const FormsPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-8 mb-8">
+                        <div className="flex flex-wrap gap-8 mb-4">
                             <div className="flex-1">
                                 <label htmlFor="segmento_empresa" className="block text-magic-100 text-xl mb-3">
                                     Segmento da Empresa
@@ -167,7 +167,7 @@ const FormsPage = () => {
                             </div>
                         </div>
 
-                        <div className="mb-8">
+                        <div className="mb-4">
                             <label htmlFor="mensagem" className="block text-magic-100 text-xl mb-3">
                                 Mensagem
                             </label>
