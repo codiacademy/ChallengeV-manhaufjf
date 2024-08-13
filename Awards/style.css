@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background: url(Imagens/Fundo\ Challenge.png) no-repeat center center/cover ;
+}
+.container{
+    /* background-image: url(Fundo\ Challenge.png); */
+    /* background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(156, 35, 217, 0.7) 35%, rgba(88,34,115,0.7) 100%); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+h1{
+    color: #d9d9d9;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+span{
+    color: blueviolet;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+}
+
+p{
+    color: #d9d9d9;
+    text-align: center;
+    max-width: 300px;
+    gap: 30px;
+}
+
+.texto1{
+    color: #d9d9d9;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.container_icon{
+
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medalha{
+    color: black;
+}
+
+.trofeu .bxs-trophy, .medalha .bxs-medal {
+    font-size: 70px;
+    color: #d9d9d9;
+    display: flex;
+    transform: translate(20vh, 0);
+    margin-bottom: 20px;
+}
+
+.line{
+    width: 2px;
+    height: 200px;
+    color: #d9d9d9;
+    background-color: #d9d9d9;
+    margin: 50px;
+    filter: drop-shadow(1px 0 4px #d9d9d9);
+}
+
+#botao{
+    color: #d9d9d9;
+    background-color: transparent;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 3px;
+    padding: 2px;
+    letter-spacing: 1px;
+    border-color: #d9d9d9;
+    border: 1px solid;
+    box-shadow: 1px 0 4px #d9d9d9;
+    box-sizing: border-box ;
+    font-size: 20px;
+}
+
+.case {
+    display: flex;
+    justify-content: space-between; /* Alinha um card à esquerda e outro à direita */
+    padding: 20px; /* Espaçamento interno do container */
+  }
+
+.case1{
+
+  background: linear-gradient(180deg, rgba(233,233,233,1) 0%, rgba(201,201,201,1) 35%, rgba(217,217,217,1) 100%);; /* Cor de fundo da card */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 20px;
+  max-width: 300px; /* Largura máxima da card */
+  box-shadow: 0 0 10px #d9d9d9; /* Sombra */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+.case2{
+  background: linear-gradient(180deg, rgba(233,233,233,1) 0%, rgba(201,201,201,1) 35%, rgba(217,217,217,1) 100%);; /* Cor de fundo da card */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 20px;
+  max-width: 300px; /* Largura máxima da card */
+  box-shadow: 0 0 10px #d9d9d9; /* Sombra */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+     
+}
+
+.case p {
+    color: #333;
+    font-size: 14px;
+    text-align: center; /* Centraliza o texto */
+  }
