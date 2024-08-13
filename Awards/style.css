@@ -130,5 +130,6 @@ p{
 .case p {
     color: #333;
     font-size: 14px;
-    text-align: center; /* Centraliza o texto */
+    text-align: left; /* Centraliza o texto */
+    flex: 1;
   }
