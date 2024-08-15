@@ -6,10 +6,10 @@
 }
 
 body {
-    background: url(Imagens/Fundo\ Challenge.png) no-repeat center center/cover ;
+    background: url(Imagens/Fundo\ Challenge.png) no-repeat center center/cover;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 120vh;
+    height: fit-content;
     
 }
 
@@ -157,31 +157,43 @@ p{
   }
 
   .case1, .case2 {
-    position: absolute;
+    display: none;
     width: 450px;
     height: 200px;
     background-color: #3498db;
-    opacity: 0;
-    transition: all 0.5s ease;
+    
 }
 
 .case1 {
-    left: -220px; /* Fora da tela à esquerda */
+    transform: translate(100vh, 0); /* Fora da tela à esquerda */
 }
 
 .case2 {
-    right: -220px; /* Fora da tela à direita */
-    background-color: #e74c3c;
+    transform: translate(-100h, 0); /* Fora da tela à direita */
 }
 
 .case1.active {
-    left: 30px; /* Posição final na tela */
-    opacity: 1;
+    display: flex;
+    position: absolute;
+    transition: all 1s ease;
+    animation: leftToRight 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .case2.active {
-    right: 30px; /* Posição final na tela */
-    opacity: 1;
+    display: flex;
+    position: absolute;
+    transition: all 1s ease;
+    animation: rightToLeft 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.btm-case.off {
+    animation: none;
+    cursor:pointer;
+    background-color: #d9d9d9;
+    color: #582173;
+    transform: scale(1.10);
+    z-index: 1;
 }
 
 @keyframes pulsar {
@@ -195,3 +207,26 @@ p{
         transform: scale(1);  /* Volta ao tamanho normal */
     }
 }
+
+@keyframes leftToRight {
+    from {
+        transform: translate(-100vh, 0);
+    }
+    to {
+        transform: translate(5vh, 0);
+    }
+}
+
+@keyframes rightToLeft {
+    from {
+        transform: translate(243vh, 0);
+    }
+    to {
+        transform: translate(138vh, 0);
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
