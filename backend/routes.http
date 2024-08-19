@@ -1,0 +1,21 @@
+POST http://localhost:3333/formlist
+Content-type: application/json
+
+{
+    "department": "Teste",
+    "email": "teste@email.com",
+    "message": "Essa eh uma mensagem",
+    "name": "Teste da Silva",
+    "company_name": "Teste Company",
+    "segment": "Teste Segmento",
+    "solution": "Teste Solucao",
+    "phone": "999999999"
+}
+
+###
+
+GET http://localhost:3333/formlist
+
+### 
+
+DELETE http://localhost:3333/formlist/e09b540d-3273-4fd4-b17b-b3fc073b60bf
