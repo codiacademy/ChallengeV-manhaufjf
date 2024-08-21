@@ -3,7 +3,7 @@
     <p>Estúdio de Software💻</p>
 </h1>
 
-<h1 align= "center"><a href="">📎 Veja o Site</a></h1>
+<h1 align= "center"><a href="https://magic-page.vercel.app/">📎 Visite o Site</a></h1>
 
 <img src= "./frontend/src/images/Magicexecution.gif">
 
