@@ -3,7 +3,7 @@ Content-type: application/json
 
 {
     "department": "Teste",
-    "email": "teste@email.com",
+    "email": "zplinio18@gmail.com",
     "message": "Essa eh uma mensagem",
     "name": "Teste da Silva",
     "company_name": "Teste Company",
