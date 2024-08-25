@@ -41,6 +41,38 @@ code {
   animation: grow 0.5s ease-out forwards;
 }
 
+.brilhante{
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), /* sombra branca brilhante */
+              0 0 15px rgba(255, 255, 255, 0.5), 
+              0 0 15px rgba(255, 255, 255, 0.3);
+}
+.rotate-shake {
+  animation: rotateShake 5s ease-in-out infinite; /* Duração da sacudida */
+  animation-delay: 2s; /* Pausa inicial */
+  animation-iteration-count: infinite; /* Repetição infinita */
+}
+
+@keyframes rotateShake {
+  0% { transform: rotate(0deg); }
+  5% { transform: rotate(-10deg); }
+  10% { transform: rotate(10deg); }
+  15% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  25% { transform: rotate(-5deg); }
+  30% { transform: rotate(5deg); }
+  35% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  45% { transform: rotate(-2deg); }
+  50% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pause {
+  0%, 90% { transform: translateX(0); }
+  100% { transform: none; }
+}
+
 
 @keyframes grow{
   0% {
